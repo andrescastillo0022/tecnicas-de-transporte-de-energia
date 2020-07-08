@@ -1,0 +1,2278 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<script type = "text/javascript">
+function res_calc(){
+
+var res_tem = parseFloat(document.getElementById("res_tem").value)
+var res_tipo = document.getElementById("res_tipo").value
+
+/////////////////////////////////////////////////////////////////////////////AAC
+if(res_tipo === "Rose"){
+	var res_r2 = 1.66/1000;
+	var res_r1 = 1.36/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Iris"){
+	var res_r2 = 1.04/1000;
+	var res_r1 = 0.854/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Pansy"){
+	var res_r2 = 0.828/1000;
+	var res_r1 = 0.678/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Poppy"){
+	var res_r2 = 0.657/1000;
+	var res_r1 = 0.537/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Aster"){
+	var res_r2 = 0.521/1000;
+	var res_r1 = 0.426/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Phlox"){
+	var res_r2 = 0.413/1000;
+	var res_r1 = 0.338/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}	
+
+if(res_tipo === "Oxlip"){
+	var res_r2 = 0.328/1000;
+	var res_r1 = 0.268/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Daisy"){
+	var res_r2 = 0.260/1000;
+	var res_r1 = 0.213/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Peony"){
+	var res_r2 = 0.231/1000;
+	var res_r1 = 0.189/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Tulip"){
+	var res_r2 = 0.206/1000;
+	var res_r1 = 0.169/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Valerian"){
+	var res_r2 = 0.277/1000;
+	var res_r1 = 0.227/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Daffodil"){
+	var res_r2 = 0.198/1000;
+	var res_r1 = 0.162/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Canna"){
+	var res_r2 = 0.174/1000;
+	var res_r1 = 0.143/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Goldentuft"){
+	var res_r2 = 0.154/1000;
+	var res_r1 = 0.126/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cosmos"){
+	var res_r2 = 0.145/1000;
+	var res_r1 = 0.119/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Zinnia"){
+	var res_r2 = 0.139/1000;
+	var res_r1 = 0.113/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dahlia"){
+	var res_r2 = 0.125/1000;
+	var res_r1 = 0.102/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Hyacinth"){
+	var res_r2 = 0.139/1000;
+	var res_r1 = 0.113/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Mistletoe"){
+	var res_r2 = 0.125/1000;
+	var res_r1 = 0.102/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Meadowseet"){
+	var res_r2 = 0.116/1000;
+	var res_r1 = 0.0945/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Orchid"){
+	var res_r2 = 0.109/1000;
+	var res_r1 = 0.0892/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Heuchera"){
+	var res_r2 = 0.107/1000;
+	var res_r1 = 0.0872/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Verbena"){
+	var res_r2 = 0.099/1000;
+	var res_r1 = 0.081/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Petunia"){
+	var res_r2 = 0.0924/1000;
+	var res_r1 = 0.0756/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Arbutus"){
+	var res_r2 = 0.0872/1000;
+	var res_r1 = 0.0713/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cockscomb"){
+	var res_r2 = 0.077/1000;
+	var res_r1 = 0.063/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Hawkweed"){
+	var res_r2 = 0.0693/1000;
+	var res_r1 = 0.0567/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bluebell"){
+	var res_r2 = 0.0671/1000;
+	var res_r1 = 0.0549/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Flag"){
+	var res_r2 = 0.099/1000;
+	var res_r1 = 0.081/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Nasturtium"){
+	var res_r2 = 0.0969/1000;
+	var res_r1 = 0.0793/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cattail"){
+	var res_r2 = 0.0924/1000;
+	var res_r1 = 0.0756/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Lilac"){
+	var res_r2 = 0.0872/1000;
+	var res_r1 = 0.0713/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Snapdragon"){
+	var res_r2 = 0.077/1000;
+	var res_r1 = 0.063/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Camellia"){
+	var res_r2 = 0.0693/1000;
+	var res_r1 = 0.0567/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Larkspur"){
+	var res_r2 = 0.0671/1000;
+	var res_r1 = 0.0549/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Marigold"){
+	var res_r2 = 0.0623/1000;
+	var res_r1 = 0.051/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Hawthorn"){
+	var res_r2 = 0.0581/1000;
+	var res_r1 = 0.0476/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Narcissus"){
+	var res_r2 = 0.0545/1000;
+	var res_r1 = 0.0446/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Columbine"){
+	var res_r2 = 0.0513/1000;
+	var res_r1 = 0.042/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Gladious"){
+	var res_r2 = 0.0459/1000;
+	var res_r1 = 0.0375/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Coreopsis"){
+	var res_r2 = 0.0436/1000;
+	var res_r1 = 0.0375/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Jessamine"){
+	var res_r2 = 0.0396/1000;
+	var res_r1 = 0.0324/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cowslip"){
+	var res_r2 = 0.0347/1000;
+	var res_r1 = 0.0284/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+//////////////////////////////////////////////////////////////////////////AAAC
+if(res_tipo === "Akron"){
+	var res_r2 = 2.57/1000;
+	var res_r1 = 2.16/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Alton"){
+	var res_r2 = 1.62/1000;
+	var res_r1 = 1.36/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Ames"){
+	var res_r2 = 1.02/1000;
+	var res_r1 = 0.853/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Astoria"){
+	var res_r2 = 0.806/1000;
+	var res_r1 = 0.677/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Azusa"){
+	var res_r2 = 0.638/1000;
+	var res_r1 = 0.536/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Anaheim"){
+	var res_r2 = 0.507/1000;
+	var res_r1 = 0.425/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Amherst"){
+	var res_r2 = 0.402/1000;
+	var res_r1 = 0.338/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Alliance"){
+	var res_r2 = 0.319/1000;
+	var res_r1 = 0.268/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+	
+if(res_tipo === "Butte"){
+	var res_r2 = 0.252/1000;
+	var res_r1 = 0.211/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Canton"){
+	var res_r2 = 0.2/1000;
+	var res_r1 = 0.168/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cairo"){
+	var res_r2 = 0.169/1000;
+	var res_r1 = 0.142/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Darien"){
+	var res_r2 = 0.141/1000;
+	var res_r1 = 0.118/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Elgin"){
+	var res_r2 = 0.121/1000;
+	var res_r1 = 0.101/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Flint"){
+	var res_r2 = 0.106/1000;
+	var res_r1 = 0.0892/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Greeley"){
+	var res_r2 = 0.0849/1000;
+	var res_r1 = 0.0713/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "16mm2"){
+	var res_r2 = 2.14/1000;
+	var res_r1 = 1.8/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "25mm2"){
+	var res_r2 = 1.38/1000;
+	var res_r1 = 1.16/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "40mm2"){
+	var res_r2 = 0.858/1000;
+	var res_r1 = 0.720/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "63mm2"){
+	var res_r2 = 0.545/1000;
+	var res_r1 = 0.458/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "100mm2"){
+	var res_r2 = 0.344/1000;
+	var res_r1 = 0.289/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "160mm2"){
+	var res_r2 = 0.214/1000;
+	var res_r1 = 0.18/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "200mm2"){
+	var res_r2 = 0.172/1000;
+	var res_r1 = 0.144/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "250mm2"){
+	var res_r2 = 0.138/1000;
+	var res_r1 = 0.116/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "315mm2"){
+	var res_r2 = 0.109/1000;
+	var res_r1 = 0.0915/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "400mm2"){
+	var res_r2 = 0.0858/1000;
+	var res_r1 = 0.0720/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "500mm2"){
+	var res_r2 = 0.0687/1000;
+	var res_r1 = 0.0577/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+//////////////////////////////////////////////////////////////////////////////////ACAR
+if(res_tipo === "12/7_250"){
+	var res_r2 = 0.290/1000;
+	var res_r1 = 0.239/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "12/7_300"){
+	var res_r2 = 0.242/1000;
+	var res_r1 = 0.199/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "12/7_350"){
+	var res_r2 = 0.207/1000;
+	var res_r1 = 0.171/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "12/7_400"){
+	var res_r2 = 0.181/1000;
+	var res_r1 = 0.150/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "12/7_450"){
+	var res_r2 = 0.161/1000;
+	var res_r1 = 0.133/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "12/7_500"){
+	var res_r2 = 0.145/1000;
+	var res_r1 = 0.120/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "12/7_550"){
+	var res_r2 = 0.132/1000;
+	var res_r1 = 0.109/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "12/7_600"){
+	var res_r2 = 0.121/1000;
+	var res_r1 = 0.100/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_500"){
+	var res_r2 = 0.148/1000;
+	var res_r1 = 0.122/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_550"){
+	var res_r2 = 0.134/1000;
+	var res_r1 = 0.111/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_600"){
+	var res_r2 = 0.123/1000;
+	var res_r1 = 0.102/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_650"){
+	var res_r2 = 0.114/1000;
+	var res_r1 = 0.0941/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_700"){
+	var res_r2 = 0.105/1000;
+	var res_r1 = 0.0874/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_750"){
+	var res_r2 = 0.0985/1000;
+	var res_r1 = 0.0816/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_800"){
+	var res_r2 = 0.0923/1000;
+	var res_r1 = 0.0765/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_850"){
+	var res_r2 = 0.0869/1000;
+	var res_r1 = 0.0720/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_900"){
+	var res_r2 = 0.0820/1000;
+	var res_r1 = 0.0680/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_950"){
+	var res_r2 = 0.0777/1000;
+	var res_r1 = 0.0644/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_1000"){
+	var res_r2 = 0.0738/1000;
+	var res_r1 = 0.0612/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_1050"){
+	var res_r2 = 0.0703/1000;
+	var res_r1 = 0.0583/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_1100"){
+	var res_r2 = 0.0671/1000;
+	var res_r1 = 0.0556/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "18/19_1200"){
+	var res_r2 = 0.0615/1000;
+	var res_r1 = 0.0510/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_500"){
+	var res_r2 = 0.142/1000;
+	var res_r1 = 0.117/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_550"){
+	var res_r2 = 0.129/1000;
+	var res_r1 = 0.106/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_600"){
+	var res_r2 = 0.118/1000;
+	var res_r1 = 0.0971/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_650"){
+	var res_r2 = 0.109/1000;
+	var res_r1 = 0.0897/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_700"){
+	var res_r2 = 0.101/1000;
+	var res_r1 = 0.0833/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_750"){
+	var res_r2 = 0.0946/1000;
+	var res_r1 = 0.0777/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_800"){
+	var res_r2 = 0.0886/1000;
+	var res_r1 = 0.0728/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_850"){
+	var res_r2 = 0.0834/1000;
+	var res_r1 = 0.0686/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_900"){
+	var res_r2 = 0.0788/1000;
+	var res_r1 = 0.0686/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_950"){
+	var res_r2 = 0.0746/1000;
+	var res_r1 = 0.0613/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_1000"){
+	var res_r2 = 0.0709/1000;
+	var res_r1 = 0.0583/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_1050"){
+	var res_r2 = 0.0675/1000;
+	var res_r1 = 0.0555/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_1100"){
+	var res_r2 = 0.0645/1000;
+	var res_r1 = 0.0530/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "30/7_1200"){
+	var res_r2 = 0.0591/1000;
+	var res_r1 = 0.0486/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_500"){
+	var res_r2 = 0.145/1000;
+	var res_r1 = 0.119/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_550"){
+	var res_r2 = 0.132/1000;
+	var res_r1 = 0.109/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_600"){
+	var res_r2 = 0.121/1000;
+	var res_r1 = 0.0995/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_650"){
+	var res_r2 = 0.109/1000;
+	var res_r1 = 0.0897/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_700"){
+	var res_r2 = 0.103/1000;
+	var res_r1 = 0.0853/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_750"){
+	var res_r2 = 0.0965/1000;
+	var res_r1 = 0.0796/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_800"){
+	var res_r2 = 0.0904/1000;
+	var res_r1 = 0.0746/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_850"){
+	var res_r2 = 0.0851/1000;
+	var res_r1 = 0.0702/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_900"){
+	var res_r2 = 0.0804/1000;
+	var res_r1 = 0.0663/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_950"){
+	var res_r2 = 0.0762/1000;
+	var res_r1 = 0.0628/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_1000"){
+	var res_r2 = 0.0724/1000;
+	var res_r1 = 0.0597/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_1050"){
+	var res_r2 = 0.0689/1000;
+	var res_r1 = 0.0568/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_1100"){
+	var res_r2 = 0.0658/1000;
+	var res_r1 = 0.0543/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "24/13_1200"){
+	var res_r2 = 0.0603/1000;
+	var res_r1 = 0.0497/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+////////////////////////////////////////////////////////////////////////////////////ACSR
+if(res_tipo === "Swan"){
+	var res_r2 = 1.7/1000;
+	var res_r1 = 1.32/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Sparrow"){
+	var res_r2 = 1.10/1000;
+	var res_r1 = 0.83/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Robin"){
+	var res_r2 = 0.884/1000;
+	var res_r1 = 0.658/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Raven"){
+	var res_r2 = 0.717/1000;
+	var res_r1 = 0.522/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}	
+
+if(res_tipo === "Quail"){
+	var res_r2 = 0.584/1000;
+	var res_r1 = 0.414/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Pigeon"){
+	var res_r2 = 0.479/1000;
+	var res_r1 = 0.328/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Penguin"){
+	var res_r2 = 0.396/1000;
+	var res_r1 = 0.260/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Partrige"){
+	var res_r2 = 0.255/1000;
+	var res_r1 = 0.209/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Ostrich"){
+	var res_r2 = 0.225/1000;
+	var res_r1 = 0.185/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Linnet"){
+	var res_r2 = 0.202/1000;
+	var res_r1 = 0.165/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Ibis"){
+	var res_r2 = 0.171/1000;
+	var res_r1 = 0.140/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Hawk"){
+	var res_r2 = 0.142/1000;
+	var res_r1 = 0.117/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dove"){
+	var res_r2 = 0.122/1000;
+	var res_r1 = 0.100/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Squab"){
+	var res_r2 = 0.112/1000;
+	var res_r1 = 0.0919/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Grosbeack"){
+	var res_r2 = 0.107/1000;
+	var res_r1 = 0.0875/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Gannet"){
+	var res_r2 = 0.102/1000;
+	var res_r1 = 0.0835/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Starling"){
+	var res_r2 = 0.0949/1000;
+	var res_r1 = 0.0777/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Drake"){
+	var res_r2 = 0.0854/1000;
+	var res_r1 = 0.0700/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Brant"){
+	var res_r2 = 0.172/1000;
+	var res_r1 = 0.141/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Flicker"){
+	var res_r2 = 0.143/1000;
+	var res_r1 = 0.117/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Parakeet"){
+	var res_r2 = 0.123/1000;
+	var res_r1 = 0.100/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Peacock"){
+	var res_r2 = 0.113/1000;
+	var res_r1 = 0.0924/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Rook"){
+	var res_r2 = 0.107/1000;
+	var res_r1 = 0.0879/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Flamingo"){
+	var res_r2 = 0.102/1000;
+	var res_r1 = 0.0839/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Stilt"){
+	var res_r2 = 0.0954/1000;
+	var res_r1 = 0.0781/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cukoo"){
+	var res_r2 = 0.0859/1000;
+	var res_r1 = 0.0703/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Waxwing"){
+	var res_r2 = 0.259/1000;
+	var res_r1 = 0.212/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "WideonMerlin"){
+	var res_r2 = 0.205/1000;
+	var res_r1 = 0.168/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Chicadee"){
+	var res_r2 = 0.174/1000;
+	var res_r1 = 0.142/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Pelican"){
+	var res_r2 = 0.145/1000;
+	var res_r1 = 0.118/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Osprey"){
+	var res_r2 = 0.124/1000;
+	var res_r1 = 0.102/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Kingbird"){
+	var res_r2 = 0.109/1000;
+	var res_r1 = 0.0889/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Piper"){
+	var res_r2 = 0.225/1000;
+	var res_r1 = 0.184/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Oriole"){
+	var res_r2 = 0.201/1000;
+	var res_r1 = 0.164/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Lark"){
+	var res_r2 = 0.170/1000;
+	var res_r1 = 0.139/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Hen"){
+	var res_r2 = 0.142/1000;
+	var res_r1 = 0.116/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Eagle"){
+	var res_r2 = 0.121/1000;
+	var res_r1 = 0.0994/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "WoodDuck"){
+	var res_r2 = 0.112/1000;
+	var res_r1 = 0.0914/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Scoter"){
+	var res_r2 = 0.106/1000;
+	var res_r1 = 0.0870/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Skimmer"){
+	var res_r2 = 0.0849/1000;
+	var res_r1 = 0.0696/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Tern"){
+	var res_r2 = 0.088/1000;
+	var res_r1 = 0.071/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Ruddy"){
+	var res_r2 = 0.078/1000;
+	var res_r1 = 0.063/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Rail"){
+	var res_r2 = 0.074/1000;
+	var res_r1 = 0.059/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Ortolan"){
+	var res_r2 = 0.069/1000;
+	var res_r1 = 0.055/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bluejay"){
+	var res_r2 = 0.064/1000;
+	var res_r1 = 0.051/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bunting"){
+	var res_r2 = 0.060/1000;
+	var res_r1 = 0.047/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bittern"){
+	var res_r2 = 0.056/1000;
+	var res_r1 = 0.044/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dipper"){
+	var res_r2 = 0.053/1000;
+	var res_r1 = 0.042/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bobolink"){
+	var res_r2 = 0.050/1000;
+	var res_r1 = 0.040/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Nuthatch"){
+	var res_r2 = 0.048/1000;
+	var res_r1 = 0.037/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Lapwing"){
+	var res_r2 = 0.046/1000;
+	var res_r1 = 0.036/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Condor"){
+	var res_r2 = 0.089/1000;
+	var res_r1 = 0.071/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Canary"){
+	var res_r2 = 0.097/1000;
+	var res_r1 = 0.062/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cardinal"){
+	var res_r2 = 0.075/1000;
+	var res_r1 = 0.059/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Curlew"){
+	var res_r2 = 0.069/1000;
+	var res_r1 = 0.054/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Finch"){
+	var res_r2 = 0.065/1000;
+	var res_r1 = 0.050/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Grackle"){
+	var res_r2 = 0.060/1000;
+	var res_r1 = 0.047/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Pheasant"){
+	var res_r2 = 0.057/1000;
+	var res_r1 = 0.044/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Martin"){
+	var res_r2 = 0.054/1000;
+	var res_r1 = 0.042/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Plover"){
+	var res_r2 = 0.051/1000;
+	var res_r1 = 0.039/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Parrot"){
+	var res_r2 = 0.048/1000;
+	var res_r1 = 0.037/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Falcon"){
+	var res_r2 = 0.046/1000;
+	var res_r1 = 0.035/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Chuckar"){
+	var res_r2 = 0.038/1000;
+	var res_r1 = 0.031/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bluebird"){
+	var res_r2 = 0.031/1000;
+	var res_r1 = 0.026/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Kiwi"){
+	var res_r2 = 0.032/1000;
+	var res_r1 = 0.026/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Thrasher"){
+	var res_r2 = 0.030/1000;
+	var res_r1 = 0.024/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Joree"){
+	var res_r2 = 0.027/1000;
+	var res_r1 = 0.022/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Petrel"){
+	var res_r2 = 0.824/1000;
+	var res_r1 = 0.516/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Minorca"){
+	var res_r2 = 0.772/1000;
+	var res_r1 = 0.474/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Legthorn"){
+	var res_r2 = 0.669/1000;
+	var res_r1 = 0.390/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Guinea"){
+	var res_r2 = 0.595/1000;
+	var res_r1 = 0.330/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dotterel"){
+	var res_r2 = 0.554/1000;
+	var res_r1 = 0.297/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dorking"){
+	var res_r2 = 0.527/1000;
+	var res_r1 = 0.275/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cochin"){
+	var res_r2 = 0.494/1000;
+	var res_r1 = 0.249/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Brahma"){
+	var res_r2 = 0.568/1000;
+	var res_r1 = 0.247/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+/////////////////////////////////////////////////////////////////////////////////ACSR/AW
+if(res_tipo === "Swan/AW"){
+	var res_r2 = 1.563/1000;
+	var res_r1 = 1.280/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Sparrow/AW"){
+	var res_r2 = 0.983/1000;
+	var res_r1 = 0.805/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Robin/AW"){
+	var res_r2 = 0.779/1000;
+	var res_r1 = 0.638/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Raven/AW"){
+	var res_r2 = 0.618/1000;
+	var res_r1 = 0.506/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}	
+
+if(res_tipo === "Quail/AW"){
+	var res_r2 = 0.490/1000;
+	var res_r1 = 0.401/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Pigeon/AW"){
+	var res_r2 = 0.389/1000;
+	var res_r1 = 0.318/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Penguin/AW"){
+	var res_r2 = 0.308/1000;
+	var res_r1 = 0.253/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Partrige/AW"){
+	var res_r2 = 0.247/1000;
+	var res_r1 = 0.202/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Ostrich/AW"){
+	var res_r2 = 0.247/1000;
+	var res_r1 = 0.180/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Linnet/AW"){
+	var res_r2 = 0.196/1000;
+	var res_r1 = 0.161/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Ibis/AW"){
+	var res_r2 = 0.166/1000;
+	var res_r1 = 0.136/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Hawk/AW"){
+	var res_r2 = 0.138/1000;
+	var res_r1 = 0.113/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dove/AW"){
+	var res_r2 = 0.118/1000;
+	var res_r1 = 0.097/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Squab/AW"){
+	var res_r2 = 0.109/1000;
+	var res_r1 = 0.089/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Grosbeack/AW"){
+	var res_r2 = 0.104/1000;
+	var res_r1 = 0.085/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Gannet"){
+	var res_r2 = 0.099/1000;
+	var res_r1 = 0.081/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Starling/AW"){
+	var res_r2 = 0.092/1000;
+	var res_r1 = 0.075/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Drake/AW"){
+	var res_r2 = 0.083/1000;
+	var res_r1 = 0.068/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Brant/AW"){
+	var res_r2 = 0.168/1000;
+	var res_r1 = 0.137/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Flicker/AW"){
+	var res_r2 = 0.140/1000;
+	var res_r1 = 0.114/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Parakeet/AW"){
+	var res_r2 = 0.120/1000;
+	var res_r1 = 0.098/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Peacock/AW"){
+	var res_r2 = 0.110/1000;
+	var res_r1 = 0.090/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Rook/AW"){
+	var res_r2 = 0.105/1000;
+	var res_r1 = 0.086/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Flamingo/AW"){
+	var res_r2 = 0.100/1000;
+	var res_r1 = 0.082/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Stilt/AW"){
+	var res_r2 = 0.093/1000;
+	var res_r1 = 0.076/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cukoo/AW"){
+	var res_r2 = 0.084/1000;
+	var res_r1 = 0.069/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Waxwing/AW"){
+	var res_r2 = 0.256/1000;
+	var res_r1 = 0.210/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "WideonMerlin/AW"){
+	var res_r2 = 0.203/1000;
+	var res_r1 = 0.166/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Chicadee/AW"){
+	var res_r2 = 0.172/1000;
+	var res_r1 = 0.141/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Pelican/AW"){
+	var res_r2 = 0.143/1000;
+	var res_r1 = 0.117/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Osprey/AW"){
+	var res_r2 = 0.123/1000;
+	var res_r1 = 0.101/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Kingbird/AW"){
+	var res_r2 = 0.107/1000;
+	var res_r1 = 0.088/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Piper/AW"){
+	var res_r2 = 0.216/1000;
+	var res_r1 = 0.117/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Oriole/AW"){
+	var res_r2 = 0.192/1000;
+	var res_r1 = 0.158/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Lark/AW"){
+	var res_r2 = 0.163/1000;
+	var res_r1 = 0.133/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Hen/AW"){
+	var res_r2 = 0.136/1000;
+	var res_r1 = 0.111/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Eagle/AW"){
+	var res_r2 = 0.116/1000;
+	var res_r1 = 0.095/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "WoodDuck/AW"){
+	var res_r2 = 0.107/1000;
+	var res_r1 = 0.088/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Scoter/AW"){
+	var res_r2 = 0.102/1000;
+	var res_r1 = 0.083/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Skimmer/AW"){
+	var res_r2 = 0.081/1000;
+	var res_r1 = 0.067/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Tern/AW"){
+	var res_r2 = 0.081/1000;
+	var res_r1 = 0.067/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Ruddy/AW"){
+	var res_r2 = 0.076/1000;
+	var res_r1 = 0.062/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Rail/AW"){
+	var res_r2 = 0.071/1000;
+	var res_r1 = 0.059/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Ortolan/AW"){
+	var res_r2 = 0.066/1000;
+	var res_r1 = 0.054/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bluejay/AW"){
+	var res_r2 = 0.061/1000;
+	var res_r1 = 0.050/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bunting/AW"){
+	var res_r2 = 0.057/1000;
+	var res_r1 = 0.047/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bittern/AW"){
+	var res_r2 = 0.054/1000;
+	var res_r1 = 0.044/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dipper/AW"){
+	var res_r2 = 0.050/1000;
+	var res_r1 = 0.041/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bobolink/AW"){
+	var res_r2 = 0.048/1000;
+	var res_r1 = 0.039/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Nuthatch/AW"){
+	var res_r2 = 0.045/1000;
+	var res_r1 = 0.037/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Lapwing/AW"){
+	var res_r2 = 0.043/1000;
+	var res_r1 = 0.035/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Condor/AW"){
+	var res_r2 = 0.084/1000;
+	var res_r1 = 0.069/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+
+if(res_tipo === "Canary/AW"){
+	var res_r2 = 0.074/1000;
+	var res_r1 = 0.061/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cardinal/AW"){
+	var res_r2 = 0.070/1000;
+	var res_r1 = 0.057/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Curlew/AW"){
+	var res_r2 = 0.065/1000;
+	var res_r1 = 0.053/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Finch/AW"){
+	var res_r2 = 0.060/1000;
+	var res_r1 = 0.049/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Grackle/AW"){
+	var res_r2 = 0.056/1000;
+	var res_r1 = 0.046/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Pheasant/AW"){
+	var res_r2 = 0.053/1000;
+	var res_r1 = 0.043/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Martin/AW"){
+	var res_r2 = 0.050/1000;
+	var res_r1 = 0.041/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Plover/AW"){
+	var res_r2 = 0.047/1000;
+	var res_r1 = 0.038/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Parrot/AW"){
+	var res_r2 = 0.044/1000;
+	var res_r1 = 0.036/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Falcon/AW"){
+	var res_r2 = 0.042/1000;
+	var res_r1 = 0.035/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Chuckar/AW"){
+	var res_r2 = 0.037/1000;
+	var res_r1 = 0.031/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Bluebird/AW"){
+	var res_r2 = 0.031/1000;
+	var res_r1 = 0.025/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Kiwi/AW"){
+	var res_r2 = 0.031/1000;
+	var res_r1 = 0.026/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Thrasher/AW"){
+	var res_r2 = 0.029/1000;
+	var res_r1 = 0.024/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Joree/AW"){
+	var res_r2 = 0.027/1000;
+	var res_r1 = 0.022/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Petrel/AW"){
+	var res_r2 = 0.570/1000;
+	var res_r1 = 0.468/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Minorca/AW"){
+	var res_r2 = 0.524/1000;
+	var res_r1 = 0.430/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Legthorn/AW"){
+	var res_r2 = 0.431/1000;
+	var res_r1 = 0.354/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Guinea/AW"){
+	var res_r2 = 0.365/1000;
+	var res_r1 = 0.300/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dotterel/AW"){
+	var res_r2 = 0.328/1000;
+	var res_r1 = 0.269/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Dorking/AW"){
+	var res_r2 = 0.304/1000;
+	var res_r1 = 0.250/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Cochin/AW"){
+	var res_r2 = 0.275/1000;
+	var res_r1 = 0.226/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+	
+if(res_tipo === "Brahma/AW"){
+	var res_r2 = 0.262/1000;
+	var res_r1 = 0.215/1000;
+	var res_m = (res_r2-res_r1)/(75-20);
+	document.getElementById('result').value = res_m*res_tem+res_r1-res_m*20;}
+}
+</script>
+		
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+						<img src="images/pngocean.com.png" id="logo1" alt=""/>					
+							<!--<span class="icon fa-diamond"></span>                width="65" height="45"-->
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Técnicas de Transporte de Energía</h1>
+								<p>Cálculo de Lineas Aereas</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Conductores</a></li>
+								<li><a href="inductancia/index.html">Inductancias</a></li>
+								<li><a href="capacitancia/index.html">Capacitancias</a></li>
+								<li><a href="caida/index.html">Caida de Voltaje</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Conductores -->
+							<article id="intro">
+								<h2 class="major">Conductores</h2>
+								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+								<p>
+<center>
+<form>
+<select id = "res_tipo">
+<option value = "">Tipo de conductor</option>
+<optgroup label="AAC (código)" class="label1">
+	<option value = "Rose">Rose</option>
+	<option value = "Iris">Iris</option>
+	<option value = "Pansy">Pansy</option>
+	<option value = "Poppy">Poppy</option>
+	<option value = "Aster">Aster</option>
+	<option value = "Phlox">Phlox</option>
+	<option value = "Oxlip">Oxlip</option>
+	<option value = "Daisy">Daisy</option>
+	<option value = "Peony">Peony</option>
+	<option value = "Tulip">Tulip</option>
+	<option value = "Valerian">Valerian</option>
+	<option value = "Daffodil">Daffodil</option>
+	<option value = "Canna">Canna</option>
+	<option value = "Goldentuft">Goldentuft</option>
+	<option value = "Cosmos">Cosmos</option>
+	<option value = "Zinnia">Zinnia</option>
+	<option value = "Dahlia">Dahlia</option>
+	<option value = "Hyacinth">Hyacinth</option>
+	<option value = "Mistletoe">Mistletoe</option>
+	<option value = "Meadowseet">Meadowseet</option>
+	<option value = "Orchid">Orchid</option>
+	<option value = "Heuchera">Heuchera</option>
+	<option value = "Verbena">Verbena</option>
+	<option value = "Petunia">Petunia</option>
+	<option value = "Arbutus">Arbutus</option>
+	<option value = "Cockscomb">Cockscomb</option>
+	<option value = "Hawkweed">Hawkweed</option>
+	<option value = "Bluebell">Bluebell</option>
+	<option value = "Flag">Flag</option>
+	<option value = "Nasturtium">Nasturtium</option>
+	<option value = "Cattail">Cattail</option>
+	<option value = "Lilac">Lilac</option>
+	<option value = "Snapdragon">Snapdragon</option>
+	<option value = "Camellia">Camellia</option>
+	<option value = "Larkspur">Larkspur</option>
+	<option value = "Marigold">Marigold</option>
+	<option value = "Hawthorn">Hawthorn</option>
+	<option value = "Narcissus">Narcissus</option>
+	<option value = "Columbine">Columbine</option>
+	<option value = "Gladious">Gladious</option>
+	<option value = "Coreopsis">Coreopsis</option>
+	<option value = "Jessamine">Jessamine</option>
+	<option value = "Cowslip">Cowslip</option>	
+</optgroup>
+<optgroup label="AAAC (código/calibre)" class="label1">
+	<option value = "Akron">Akron</option>
+	<option value = "Alton">Alton</option>
+	<option value = "Ames">Ames</option>
+	<option value = "Astoria">Astoria</option>
+	<option value = "Azusa">Azusa</option>
+	<option value = "Anaheim">Anaheim</option>
+	<option value = "Amherst">Amherst</option>
+	<option value = "Alliance">Alliance</option>
+	<option value = "Butte">Butte</option>
+	<option value = "Canton">Canton</option>
+	<option value = "Cairo">Cairo</option>
+	<option value = "Darien">Darien</option>
+	<option value = "Elgin">Elgin</option>
+	<option value = "Flint">Flint</option>
+	<option value = "Greeley">Greeley</option>
+	<option value = "16mm2">16mm2</option>
+	<option value = "25mm2">25mm2</option>
+	<option value = "40mm2">40mm2</option>
+	<option value = "63mm2">63mm2</option>
+	<option value = "100mm2">100mm2</option>
+	<option value = "160mm2">160mm2</option>
+	<option value = "200mm2">200mm2</option>
+	<option value = "250mm2">250mm2</option>
+	<option value = "315mm2">315mm2</option>
+	<option value = "400mm2">400mm2</option>
+	<option value = "500mm2">500mm2</option>
+</optgroup>
+<optgroup label="ACAR (Cableado_calibre Kcmil)" class="label1">
+	<option value = "12/7_250">12/7_250</option>
+	<option value = "12/7_300">12/7_300</option>
+	<option value = "12/7_350">12/7_350</option>
+	<option value = "12/7_400">12/7_400</option>
+	<option value = "12/7_450">12/7_450</option>
+	<option value = "12/7_500">12/7_500</option>
+	<option value = "12/7_550">12/7_550</option>
+	<option value = "12/7_600">12/7_600</option>
+	<option value = "18/19_500">18/19_500</option>
+	<option value = "18/19_550">18/19_550</option>
+	<option value = "18/19_600">18/19_600</option>
+	<option value = "18/19_650">18/19_650</option>
+	<option value = "18/19_700">18/19_700</option>
+	<option value = "18/19_750">18/19_750</option>
+	<option value = "18/19_800">18/19_800</option>
+	<option value = "18/19_850">18/19_850</option>
+	<option value = "18/19_900">18/19_900</option>
+	<option value = "18/19_950">18/19_950</option>
+	<option value = "18/19_1000">18/19_1000</option>
+	<option value = "18/19_1050">18/19_1050</option>
+	<option value = "18/19_1100">18/19_1100</option>
+	<option value = "18/19_1200">18/19_1200</option>
+	<option value = "30/7_500">30/7_500</option>
+	<option value = "30/7_550">30/7_550</option>
+	<option value = "30/7_600">30/7_600</option>
+	<option value = "30/7_650">30/7_650</option>
+	<option value = "30/7_700">30/7_700</option>
+	<option value = "30/7_750">30/7_750</option>
+	<option value = "30/7_800">30/7_800</option>
+	<option value = "30/7_850">30/7_850</option>
+	<option value = "30/7_900">30/7_900</option>
+	<option value = "30/7_950">30/7_950</option>
+	<option value = "30/7_1000">30/7_1000</option>
+	<option value = "30/7_1050">30/7_1050</option>
+	<option value = "30/7_1100">30/7_1100</option>
+	<option value = "30/7_1200">30/7_1200</option>
+	<option value = "24/13_500">24/13_500</option>
+	<option value = "24/13_550">24/13_550</option>
+	<option value = "24/13_600">24/13_600</option>
+	<option value = "24/13_650">24/13_650</option>
+	<option value = "24/13_700">24/13_700</option>
+	<option value = "24/13_750">24/13_750</option>
+	<option value = "24/13_800">24/13_800</option>
+	<option value = "24/13_850">24/13_850</option>
+	<option value = "24/13_900">24/13_900</option>
+	<option value = "24/13_950">24/13_950</option>
+	<option value = "24/13_1000">24/13_1000</option>
+	<option value = "24/13_1050">24/13_1050</option>
+	<option value = "24/13_1100">24/13_1100</option>
+	<option value = "24/13_1200">24/13_1200</option>	
+</optgroup>
+<optgroup label="ACSR (código)" class="label1">
+	<option value = "Swan">Swan</option>
+	<option value = "Sparrow">Sparrow</option>
+	<option value = "Robin">Robin</option>
+	<option value = "Raven">Raven</option>
+	<option value = "Quail">Quail</option>
+	<option value = "Pigeon">Pigeon</option>
+	<option value = "Penguin">Penguin</option>
+	<option value = "Partrige">Partrige</option>
+	<option value = "Ostrich">Ostrich</option>
+	<option value = "Linnet">Linnet</option>
+	<option value = "Ibis">Ibis</option>
+	<option value = "Hawk">Hawk</option>
+	<option value = "Dove">Dove</option>
+	<option value = "Squab">Squab</option>
+	<option value = "Grosbeack">Grosbeack</option>
+	<option value = "Gannet">Gannet</option>
+	<option value = "Starling">Starling</option>
+	<option value = "Drake">Drake</option>
+	<option value = "Brant">Brant</option>
+	<option value = "Flicker">Flicker</option>
+	<option value = "Parakeet">Parakeet</option>
+	<option value = "Peacock">Peacock</option>
+	<option value = "Rook">Rook</option>
+	<option value = "Flamingo">Flamingo</option>
+	<option value = "Stilt">Stilt</option>
+	<option value = "Cukoo">Cukoo</option>
+	<option value = "Waxwing">Waxwing</option>
+	<option value = "WideonMerlin">WideonMerlin</option>
+	<option value = "Chicadee">Chicadee</option>
+	<option value = "Pelican">Pelican</option>
+	<option value = "Osprey">Osprey</option>
+	<option value = "Kingbird">Kingbird</option>
+	<option value = "Piper">Piper</option>
+	<option value = "Oriole">Oriole</option>
+	<option value = "Lark">Lark</option>
+	<option value = "Hen">Hen</option>
+	<option value = "Eagle">Eagle</option>
+	<option value = "WoodDuck">WoodDuck</option>
+	<option value = "Scoter">Scoter</option>
+	<option value = "Skimmer">Skimmer</option>
+	<option value = "Tern">Tern</option>
+	<option value = "Ruddy">Ruddy</option>
+	<option value = "Rail">Rail</option>
+	<option value = "Ortolan">Ortolan</option>
+	<option value = "Bluejay">Bluejay</option>
+	<option value = "Bunting">Bunting</option>
+	<option value = "Bittern">Bittern</option>
+	<option value = "Dipper">Dipper</option>
+	<option value = "Bobolink">Bobolink</option>
+	<option value = "Nuthatch">Nuthatch</option>
+	<option value = "Lapwing">Lapwing</option>
+	<option value = "Condor">Condor</option>
+	<option value = "Canary">Canary</option>
+	<option value = "Cardinal">Cardinal</option>
+	<option value = "Curlew">Curlew</option>
+	<option value = "Finch">Finch</option>
+	<option value = "Grackle">Grackle</option>
+	<option value = "Pheasant">Pheasant</option>
+	<option value = "Martin">Martin</option>
+	<option value = "Plover">Plover</option>
+	<option value = "Parrot">Parrot</option>
+	<option value = "Falcon">Falcon</option>
+	<option value = "Chuckar">Chuckar</option>
+	<option value = "Bluebird">Bluebird</option>
+	<option value = "Kiwi">Kiwi</option>
+	<option value = "Thrasher">Thrasher</option>
+	<option value = "Joree">Joree</option>
+	<option value = "Petrel">Petrel</option>
+	<option value = "Minorca">Minorca</option>
+	<option value = "Legthorn">Legthorn</option>
+	<option value = "Guinea">Guinea</option>
+	<option value = "Dotterel">Dotterel</option>
+	<option value = "Dorking">Dorking</option>
+	<option value = "Cochin">Cochin</option>
+	<option value = "Brahma">Brahma</option>	
+</optgroup>
+<optgroup label="ACSR/AW (código)" class="label1">
+	<option value = "Swan/AW">Swan/AW</option>
+	<option value = "Sparrow/AW">Sparrow/AW</option>
+	<option value = "Robin/AW">Robin/AW</option>
+	<option value = "Raven/AW">Raven/AW</option>
+	<option value = "Quail/AW">Quail/AW</option>
+	<option value = "Pigeon/AW">Pigeon/AW</option>
+	<option value = "Penguin/AW">Penguin/AW</option>
+	<option value = "Partrige/AW">Partrige/AW</option>
+	<option value = "Ostrich/AW">Ostrich/AW</option>
+	<option value = "Linnet/AW">Linnet/AW</option>
+	<option value = "Ibis/AW">Ibis/AW</option>
+	<option value = "Hawk/AW">Hawk/AW</option>
+	<option value = "Dove/AW">Dove/AW</option>
+	<option value = "Squab/AW">Squab/AW</option>
+	<option value = "Grosbeack/AW">Grosbeack/AW</option>
+	<option value = "Gannet/AW">Gannet/AW</option>
+	<option value = "Starling/AW">Starling/AW</option>
+	<option value = "Drake/AW">Drake/AW</option>
+	<option value = "Brant/AW">Brant/AW</option>
+	<option value = "Flicker/AW">Flicker/AW</option>
+	<option value = "Parakeet/AW">Parakeet/AW</option>
+	<option value = "Peacock/AW">Peacock/AW</option>
+	<option value = "Rook/AW">Rook/AW</option>
+	<option value = "Flamingo/AW">Flamingo/AW</option>
+	<option value = "Stilt/AW">Stilt/AW</option>
+	<option value = "Cukoo/AW">Cukoo/AW</option>
+	<option value = "Waxwing/AW">Waxwing/AW</option>
+	<option value = "Wideon(Merlin)/AW">Wideon(Merlin)/AW</option>
+	<option value = "Chicadee/AW">Chicadee/AW</option>
+	<option value = "Pelican/AW">Pelican/AW</option>
+	<option value = "Osprey/AW">Osprey/AW</option>
+	<option value = "Kingbird/AW">Kingbird/AW</option>
+	<option value = "Piper/AW">Piper/AW</option>
+	<option value = "Oriole/AW">Oriole/AW</option>
+	<option value = "Lark/AW">Lark/AW</option>
+	<option value = "Hen/AW">Hen/AW</option>
+	<option value = "Eagle/AW">Eagle/AW</option>
+	<option value = "WoodDuck/AW">WoodDuck/AW</option>
+	<option value = "Scoter/AW">Scoter/AW</option>
+	<option value = "Skimmer/AW">Skimmer/AW</option>
+	<option value = "Tern/AW">Tern/AW</option>
+	<option value = "Ruddy/AW">Ruddy/AW</option>
+	<option value = "Rail/AW">Rail/AW</option>
+	<option value = "Ortolan/AW">Ortolan/AW</option>
+	<option value = "Bluejay/AW">Bluejay/AW</option>
+	<option value = "Bunting/AW">Bunting/AW</option>
+	<option value = "Bitter/AW">Bitter/AW</option>
+	<option value = "Dipper/AW">Dipper/AW</option>
+	<option value = "Bobolink/AW">Bobolink/AW</option>
+	<option value = "Nuthatch/AW">Nuthatch/AW</option>
+	<option value = "Lapwing/AW">Lapwing/AW</option>
+	<option value = "Condor/AW">Condor/AW</option>
+	<option value = "Canary/AW">Canary/AW</option>
+	<option value = "Cardinal/AW">Cardinal/AW</option>
+	<option value = "Curlew/AW">Curlew/AW</option>
+	<option value = "Finch/AW">Finch/AW</option>
+	<option value = "Grackle/AW">Grackle/AW</option>
+	<option value = "Pheasant/AW">Pheasant/AW</option>
+	<option value = "Martin/AW">Martin/AW</option>
+	<option value = "Plover/AW">Plover/AW</option>
+	<option value = "Parrot/AW">Parrot/AW</option>
+	<option value = "Falcon/AW">Falcon/AW</option>
+	<option value = "Chuckar/AW">Chuckar/AW</option>
+	<option value = "Bluebird/AW">Bluebird/AW</option>
+	<option value = "Kiwi/AW">Kiwi/AW</option>
+	<option value = "Thrasher/AW">Thrasher/AW</option>
+	<option value = "Joree/AW">Joree/AW</option>
+	<option value = "Petrel/AW">Petrel/AW</option>
+	<option value = "Minorca/AW">Minorca/AW</option>
+	<option value = "Legthorn/AW">Legthorn/AW</option>
+	<option value = "Guinea/AW">Guinea/AW</option>
+	<option value = "Dotterel/AW">Dotterel/AW</option>
+	<option value = "Dorking/AW">Dorking/AW</option>
+	<option value = "Cochin/AW">Cochin/AW</option>
+	<option value = "Brahma/AW">Brahma/AW</option>
+</optgroup>
+
+</select><br><br>
+<input placeholder="Temperatura en ºC" type = "text" id = "res_tem"><br><br>
+<input type = "Button" value = "Calcular" onclick="res_calc();"><br><br>
+Resultado<br>
+<input type = "text" readonly id = "result"> Ω/m<br><br>
+<input type = "reset" value = "Limpiar">
+</form>
+</center>									
+								</p>
+								</article>
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Inductancia</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>
+									
+								</p>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">Capacitancia</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>
+									
+								</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button special">Special</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button special icon fa-download">Icon</a></li>
+										<li><a href="#" class="button icon fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button special disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="field half first">
+											<label for="demo-name">Name</label>
+											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+										</div>
+										<div class="field half">
+											<label for="demo-email">Email</label>
+											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+										</div>
+										<div class="field">
+											<label for="demo-category">Category</label>
+											<div class="select-wrapper">
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+										</div>
+										<div class="field half first">
+											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+											<label for="demo-priority-low">Low</label>
+										</div>
+										<div class="field half">
+											<input type="radio" id="demo-priority-high" name="demo-priority">
+											<label for="demo-priority-high">High</label>
+										</div>
+										<div class="field half first">
+											<input type="checkbox" id="demo-copy" name="demo-copy">
+											<label for="demo-copy">Email me a copy</label>
+										</div>
+										<div class="field half">
+											<input type="checkbox" id="demo-human" name="demo-human" checked>
+											<label for="demo-human">Not a robot</label>
+										</div>
+										<div class="field">
+											<label for="demo-message">Message</label>
+											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Creado por Andrés Castillo <br> Diseño original tomado de <a href="https://html5up.net">HTML5 UP</a></p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

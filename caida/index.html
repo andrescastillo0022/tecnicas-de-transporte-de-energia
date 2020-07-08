@@ -1,0 +1,673 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Capacitancia</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<script type = "text/javascript">
+function C_calc(){
+
+var C_R = parseFloat(document.getElementById("C_R").value);
+var C_XL = parseFloat(document.getElementById("C_XL").value);
+var C_P = parseFloat(document.getElementById("C_P").value);
+var C_L = parseFloat(document.getElementById("C_L").value);
+var C_VR_LL = parseFloat(document.getElementById("C_VR_LL").value);
+var C_FP = parseFloat(document.getElementById("C_FP").value);
+var C_FP_signo = document.getElementById("C_FP_signo").value;
+
+	var C_Zmodulo = Math.pow(Math.pow(C_R*C_L*1000, 2)+Math.pow(C_XL*C_L*1000, 2), 1/2);
+	var C_Zangulo = (Math.atan(C_XL/C_R)*180)/Math.PI;
+	var C_IRmodulo = C_P*1000/(Math.pow(3, 1/2)*C_VR_LL*1000*C_FP);
+	if(C_FP_signo === "C_atraso"){
+		var C_IRangulo = (-1)*Math.acos(C_FP)*180/Math.PI;}
+	else if(C_FP_signo === "C_adelanto"){		
+		var C_IRangulo = Math.acos(C_FP)*180/Math.PI;}
+	
+	var C_IRZmodulo = C_Zmodulo*C_IRmodulo;
+	var C_IRZangulo = (C_Zangulo+C_IRangulo)*Math.PI/180;
+	var C_IRZreal = Math.cos(C_IRZangulo)*C_IRZmodulo;
+	var C_IRZimaginario = Math.sin(C_IRZangulo)*C_IRZmodulo;
+	var C_VSreal = C_VR_LL*1000/Math.pow(3, 1/2)+C_IRZreal;
+	
+	var C_VS_LNmodulo = Math.pow(Math.pow(C_VSreal, 2)+Math.pow(C_IRZimaginario, 2),1/2);
+	var C_VS_LNangulo = (Math.atan(C_IRZimaginario/C_VSreal)*180)/Math.PI;
+	
+	document.getElementById('C_VSm_result').value = C_VS_LNmodulo;
+	document.getElementById('C_VSa_result').value = C_VS_LNangulo;
+	document.getElementById('C_IRm_result').value = C_IRmodulo;
+	document.getElementById('C_IRa_result').value = C_IRangulo;
+}
+</script>
+	
+		<script type = "text/javascript">
+function M_calc(){
+
+var M_R =  		 parseFloat(document.getElementById("M_R").value);
+var M_XL = 		 parseFloat(document.getElementById("M_XL").value);
+var M_XC = 		 parseFloat(document.getElementById("M_XC").value);
+var M_P =  		 parseFloat(document.getElementById("M_P").value);
+var M_L =        parseFloat(document.getElementById("M_L").value);
+var M_VR_LL =    parseFloat(document.getElementById("M_VR_LL").value);
+var M_FP =       parseFloat(document.getElementById("M_FP").value);
+var M_FP_signo = 			document.getElementById("M_FP_signo").value;
+	
+	var M_Zreal = M_R*M_L*1000;
+	var M_Zimaginario = M_XL*M_L*1000;
+	var M_Zmodulo = Math.pow(Math.pow(M_Zreal, 2)+Math.pow(M_Zimaginario, 2), 1/2);
+	var M_Zangulo = Math.atan(M_Zimaginario/M_Zreal)*180/Math.PI;
+	
+	var M_Y2real = 0;
+	var M_Y2imaginario = (1)/((2*M_XC*1000000)/(M_L*1000));
+	var M_Y2modulo = Math.pow(Math.pow(M_Y2real, 2)+Math.pow(M_Y2imaginario, 2) ,1/2);
+	var M_Y2angulo = (Math.atan(M_Y2imaginario/M_Y2real))*180/Math.PI;
+	
+	var M_Irmodulo = M_P*1000/(Math.pow(3, 1/2)*M_VR_LL*1000*M_FP);
+	if(M_FP_signo === "M_atraso"){
+		var M_Irangulo = (-1)*Math.acos(M_FP)*180/Math.PI;}
+	else if(M_FP_signo === "M_adelanto"){		
+		var M_Irangulo = Math.acos(M_FP)*180/Math.PI;}	
+	var M_Irreal = Math.cos((M_Irangulo*Math.PI)/180)*M_Irmodulo;
+	var M_Irimaginario = Math.sin((M_Irangulo*Math.PI)/180)*M_Irmodulo;
+	
+	var M_Vrreal = M_VR_LL*1000/Math.pow(3, 1/2);
+	var M_Vrimaginario = 0;
+	
+	var M_A1modulo = M_Vrreal*M_Zmodulo*M_Y2modulo; //multiplicacion de Vr*Z*Y2 expresado en forma polar (modulo)
+	var M_A1angulo = M_Zangulo+M_Y2angulo; //multiplicacion de Vr*Z*Y2 expresado en forma polar (angulo)
+	var M_A2modulo = M_Irmodulo*M_Zmodulo; //multiplicacion de Ir*Z expresado en forma polar (modulo)
+	var M_A2angulo = M_Irangulo+M_Zangulo; //multiplicacion de Ir*Z expresado en forma polar (angulo)
+
+	var M_A1real = Math.cos(M_A1angulo*Math.PI/180)*M_A1modulo; //A1 en forma rectangular (parte real)
+	var M_A1imaginario = Math.sin(M_A1angulo*Math.PI/180)*M_A1modulo; //A1 en forma rectangular (parte imaginario)
+	var M_A2real = Math.cos(M_A2angulo*Math.PI/180)*M_A2modulo; //A2 en forma rectangular (parte real)
+	var M_A2imaginario = Math.sin(M_A2angulo*Math.PI/180)*M_A2modulo; //A2 en forma rectangular (parte imaginario)
+	
+	var M_Vsreal = M_A1real+M_A2real+M_Vrreal; // suma de A1+A2+Vr en forma reactangular (parte real)
+	var M_Vsimaginario = M_A1imaginario+M_A2imaginario; // suma de A1+A2+Vr en forma reactangular (parte imaginario)
+	var M_Vsmodulo = Math.pow(Math.pow(M_Vsreal, 2)+Math.pow(M_Vsimaginario, 2), 1/2);
+	var M_Vsangulo = (Math.atan(M_Vsimaginario/M_Vsreal))*180/Math.PI;
+	
+	var M_A3modulo = M_Vsmodulo*M_Y2modulo; //multiplicacion de Vs*Y2 expresado en forma polar (modulo)
+	var M_A3angulo = M_Vsangulo+M_Y2angulo; //multiplicacion de Vs*Y2 expresado en forma polar (angulo)
+	var M_A4modulo = M_Vrreal*M_Y2modulo; //multiplicacion de Vr*Y2 expresado en forma polar (modulo)
+	var M_A4angulo = M_Vrimaginario+M_Y2angulo; //multiplicacion de Vr*Y2 expresado en forma polar (angulo)
+	
+	var M_A3real = Math.cos(M_A3angulo*Math.PI/180)*M_A3modulo; //A3 en forma rectangular (parte real)
+	var M_A3imaginario = Math.sin(M_A3angulo*Math.PI/180)*M_A3modulo; //A3 en forma rectangular (parte imaginario)
+	var M_A4real = Math.cos(M_A4angulo*Math.PI/180)*M_A4modulo; //A4 en forma rectangular (parte real)
+	var M_A4imaginario = Math.sin(M_A4angulo*Math.PI/180)*M_A4modulo; //A4 en forma rectangular (parte imaginario)
+	
+	var M_Isreal = M_A3real+M_A4real+M_Irreal; // suma de A3+A4+Ir en forma reactangular (parte real)
+	var M_Isimaginario = M_A4imaginario+M_A4imaginario+M_Irimaginario; // suma de A3+A4+Ir en forma reactangular (parte imaginario)
+	var M_Ismodulo = Math.pow(Math.pow(M_Isreal, 2)+Math.pow(M_Isimaginario, 2), 1/2);
+	var M_Isangulo = (Math.atan(M_Isimaginario/M_Isreal))*180/Math.PI;
+	
+	document.getElementById('M_VSm_result').value = M_Vsmodulo; 
+	document.getElementById('M_VSa_result').value = M_Vsangulo; 
+	document.getElementById('M_IRm_result').value = M_Ismodulo; 
+	document.getElementById('M_IRa_result').value = M_Isangulo; 
+}
+</script>
+
+<script type="text/javascript">
+	function L_calc() {
+
+		var L_R = parseFloat(document.getElementById("L_R").value);
+		var L_XL = parseFloat(document.getElementById("L_XL").value);
+		var L_XC = parseFloat(document.getElementById("L_XC").value);
+		var L_P = parseFloat(document.getElementById("L_P").value);
+		var L_L = parseFloat(document.getElementById("L_L").value);
+		var L_VR_LL = parseFloat(document.getElementById("L_VR_LL").value);
+		var L_FP = parseFloat(document.getElementById("L_FP").value);
+		var L_FP_signo = document.getElementById("L_FP_signo").value;
+
+
+		var L_Zreal = L_R * L_L * 1000; // Z por la longitud (parte real) = Resistencia por la longitud
+		var L_Zimaginario = L_XL * L_L * 1000; // Z por la longitud (parte imaginaria) = Inductancia por la longitud
+		var L_Zmodulo = Math.pow(Math.pow(L_Zreal, 2) + Math.pow(L_Zimaginario, 2), 1 / 2); // Z por la longitud (modulo) = Resistencia por la longitud
+		var L_Zangulo = Math.atan(L_Zimaginario / L_Zreal) * 180 / Math.PI; // Z por la longitud (angulo) = Inductancia por la longitud
+
+		var L_Y2real = 0; // Y/2 real
+		var L_Y2imaginario = (1) / ((2 * L_XC * 1000000) / (L_L * 1000)); // Y/2 imaginario
+		var L_Y2modulo = Math.pow(Math.pow(L_Y2real, 2) + Math.pow(L_Y2imaginario, 2), 1 / 2); // Y/2 modulo
+		var L_Y2angulo = (Math.atan(L_Y2imaginario / L_Y2real)) * 180 / Math.PI; // Y/2 angulo
+
+		var L_zureal = L_R; // zu real
+		var L_zuimaginario = L_XL; //zu imaginario
+		var L_zumodulo = Math.pow(Math.pow(L_zureal, 2) + Math.pow(L_zuimaginario, 2), 1 / 2); // zu modulo
+		var L_zuangulo = (Math.atan(L_zuimaginario / L_zureal)) * 180 / Math.PI; // zu anguulo
+
+		var L_yureal = 0; // yu real
+		var L_yuimaginario = (1) / (L_XC * 1000000); //yu imaginario
+		var L_yumodulo = Math.pow(Math.pow(L_yureal, 2) + Math.pow(L_yuimaginario, 2), 1 / 2); // yu modulo
+		var L_yuangulo = (Math.atan(L_yuimaginario / L_yureal)) * 180 / Math.PI; // yu angulo
+
+		var L_zuyumodulo = L_zumodulo * L_yumodulo; // zu por yu modulo
+		var L_zuyuangulo = L_zuangulo + L_yuangulo; // zu por yu angulo
+		var L_zuyureal = Math.cos((L_zuyuangulo * Math.PI) / 180) * L_zuyumodulo; // zu por yu parte real
+		var L_zuyuimaginario = Math.sin((L_zuyuangulo * Math.PI) / 180) * L_zuyumodulo; // zu por yu parte imaginaria
+
+		var L_GammaLmodulo = Math.pow(L_zuyumodulo, 1/2) * L_L * 1000; //Gamma por longitud (modulo)
+		var L_GammaLangulo_1 = L_zuyuangulo / 2;                       //Gamma por longutud, raiz 1 (angulo)
+		var L_GammaLangulo_2 = (L_zuyuangulo + 360) / 2;               //Gamma por longutud, raiz 2  (angulo)
+		var L_GammaLreal_1 = Math.cos((L_GammaLangulo_1 * Math.PI) / 180) * L_GammaLmodulo; //Gamma por longutud, raiz 1 (parte real)
+		var L_GammaLimaginario_1 = Math.sin((L_GammaLangulo_1 * Math.PI) / 180) * L_GammaLmodulo; //Gamma por longutud, raiz 1 (parte imaginaria)
+		var L_GammaLreal_2 = Math.cos((L_GammaLangulo_2 * Math.PI) / 180) * L_GammaLmodulo; //Gamma por longutud, raiz 2 (parte real)
+		var L_GammaLimaginario_2 = Math.sin((L_GammaLangulo_2 * Math.PI) / 180) * L_GammaLmodulo; //Gamma por longutud, raiz 2 (parte imaginaria)
+		
+		var L_ZGammaLmodulo = L_Zmodulo / L_GammaLmodulo;  // Z entre gamma por longitud (modulo)
+		var L_ZGammaLangulo_1 = L_Zangulo - L_GammaLangulo_1; // Z entre gamma por longitud raiz 1 (angulo)
+		var L_ZGammaLangulo_2 = L_Zangulo - L_GammaLangulo_2; // Z entre gamma por longitud raiz 2 (angulo)			
+		var L_ZGammaLreal_1 = Math.cos((L_ZGammaLangulo_1 * Math.PI) / 180) * L_ZGammaLmodulo; // Z entre gamma por longitud raiz 1 (parte real)
+		var L_ZGammaLimaginario_1 = Math.sin((L_ZGammaLangulo_1 * Math.PI) / 180) * L_ZGammaLmodulo; // Z entre gamma por longitud raiz 1 (parte imaginaria)
+		var L_ZGammaLreal_2 = Math.cos((L_ZGammaLangulo_2 * Math.PI) / 180) * L_ZGammaLmodulo;		// Z entre gamma por longitud raiz 2 (parte real)	
+		var L_ZGammaLimaginario_2 = Math.sin((L_ZGammaLangulo_2 * Math.PI) / 180) * L_ZGammaLmodulo; // Z entre gamma por longitud raiz 2 (parte imaginaria)
+
+		var L_senhreal_1 = (Math.cos(L_GammaLmodulo) * Math.pow(Math.E, L_GammaLreal_1) / 2) - (Math.cos(-L_GammaLmodulo) * Math.pow(Math.E, -L_GammaLreal_1) / 2); //seno hiperbolico (parte  real)
+		var L_senhimaginario_1 = (Math.sin(L_GammaLmodulo) * Math.pow(Math.E, L_GammaLreal_1) / 2) - (Math.sin(-L_GammaLmodulo) * Math.pow(Math.E, -L_GammaLreal_1) / 2); //seno hiperbolico (parte  imaginaria)
+		var L_senhmodulo_1 = Math.pow(Math.pow(L_senhreal_1, 2) + Math.pow(L_senhimaginario_1, 2), 1 / 2); //seno hiperbolico (modulo)
+		var L_senhangulo_1 = (Math.atan(L_senhimaginario_1 / L_senhreal_1)) * 180 / Math.PI; //seno hiperbolico (angulo)
+		var L_senhreal_2 = (Math.cos(L_GammaLmodulo) * Math.pow(Math.E, L_GammaLreal_2) / 2) - (Math.cos(-L_GammaLmodulo) * Math.pow(Math.E, -L_GammaLreal_2) / 2);
+		var L_senhimaginario_2 = (Math.sin(L_GammaLmodulo) * Math.pow(Math.E, L_GammaLreal_2) / 2) - (Math.sin(-L_GammaLmodulo) * Math.pow(Math.E, -L_GammaLreal_2) / 2);
+		var L_senhmodulo_2 = Math.pow(Math.pow(L_senhreal_2, 2) + Math.pow(L_senhimaginario_2, 2), 1 / 2);
+		var L_senhangulo_2 = (Math.atan(L_senhimaginario_2 / L_senhreal_2)) * 180 / Math.PI;
+
+		var L_Zprimamodulo_1 = L_ZGammaLmodulo * L_senhmodulo_1; // Z prima raiz 1 (modulo)
+		var L_Zprimaangulo_1 = L_ZGammaLangulo_1 + L_senhangulo_1; // Z prima raiz 1 (angulo)
+		var L_Zprimamodulo_2 = L_ZGammaLmodulo * L_senhmodulo_2; // Z prima raiz 1 (modulo)
+		var L_Zprimaangulo_2 = L_ZGammaLangulo_2 + L_senhangulo_2; // Z prima raiz 2 (angulo)
+
+		var L_Y2GamaL2modulo_raiz1 = L_Y2modulo / (L_GammaLmodulo / 2); // (Y/2) / (gamma*L/2) raiz1 (modulo)
+		var L_Y2GamaL2angulo_raiz1 = L_Y2angulo - L_GammaLangulo_1; // (Y/2) / (gamma*L/2) raiz1 (angulo)
+		var L_Y2GamaL2modulo_raiz2 = L_Y2modulo / (L_GammaLmodulo / 2); // (Y/2) / (gamma*L/2) raiz2 (modulo)
+		var L_Y2GamaL2angulo_raiz2 = L_Y2angulo - L_GammaLangulo_2; // (Y/2) / (gamma*L/2) raiz2 (angulo)
+
+		var L_Y2senhreal_1 = (Math.cos(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_1) / 2) - (Math.cos(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_1) / 2); //seno hiperbolico de Y/2 (parte  real)
+		var L_Y2senhimaginario_1 = (Math.sin(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_1) / 2) - (Math.sin(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_1) / 2); //seno hiperbolico de Y/2 (parte  imaginaria)
+		var L_Y2senhmodulo_1 = Math.pow(Math.pow(L_Y2senhreal_1, 2) + Math.pow(L_Y2senhimaginario_1, 2), 1 / 2); //seno hiperbolico de Y/2 (modulo)
+		var L_Y2senhangulo_1 = (Math.atan(L_Y2senhimaginario_1 / L_Y2senhreal_1)) * 180 / Math.PI; //seno hiperbolico de Y/2 (angulo)
+		var L_Y2senhreal_2 = (Math.cos(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_2) / 2) - (Math.cos(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_2) / 2);
+		var L_Y2senhimaginario_2 = (Math.sin(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_2) / 2) - (Math.sin(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_2) / 2);
+		var L_Y2senhmodulo_2 = Math.pow(Math.pow(L_Y2senhreal_2, 2) + Math.pow(L_Y2senhimaginario_2, 2), 1 / 2);
+		var L_Y2senhangulo_2 = (Math.atan(L_Y2senhimaginario_2 / L_Y2senhreal_2)) * 180 / Math.PI;
+		
+		var L_Y2coshreal_1 = (Math.cos(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_1) / 2) + (Math.cos(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_1) / 2); //seno hiperbolico de Y/2 (parte  real)
+		var L_Y2coshimaginario_1 = (Math.sin(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_1) / 2) + (Math.sin(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_1) / 2); //seno hiperbolico de Y/2 (parte  imaginaria)
+		var L_Y2coshmodulo_1 = Math.pow(Math.pow(L_Y2coshreal_1, 2) + Math.pow(L_Y2coshimaginario_1, 2), 1 / 2); //seno hiperbolico de Y/2 (modulo)
+		var L_Y2coshangulo_1 = (Math.atan(L_Y2coshimaginario_1 / L_Y2coshreal_1)) * 180 / Math.PI; //seno hiperbolico de Y/2 (angulo)
+		var L_Y2coshreal_2 = (Math.cos(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_2) / 2) + (Math.cos(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_2) / 2);
+		var L_Y2coshimaginario_2 = (Math.sin(L_GammaLmodulo / 2) * Math.pow(Math.E, L_GammaLreal_2) / 2) + (Math.sin(-L_GammaLmodulo / 2) * Math.pow(Math.E, -L_GammaLreal_2) / 2);
+		var L_Y2coshmodulo_2 = Math.pow(Math.pow(L_Y2coshreal_2, 2) + Math.pow(L_Y2coshimaginario_2, 2), 1 / 2);
+		var L_Y2coshangulo_2 = (Math.atan(L_Y2coshimaginario_2 / L_Y2coshreal_2)) * 180 / Math.PI;
+
+		var L_Y2tanhmodulo_1 = L_Y2senhmodulo_1 / L_Y2coshmodulo_1;
+		var L_Y2tanhangulo_1 = L_Y2senhangulo_1 - L_Y2coshangulo_1;
+		var L_Y2tanhmodulo_2 = L_Y2senhmodulo_2 / L_Y2coshmodulo_2;
+		var L_Y2tanhangulo_2 = L_Y2senhangulo_2 - L_Y2coshangulo_2;
+
+		var L_Yprimamodulo_1 = L_Y2GamaL2modulo_raiz1 * L_Y2tanhmodulo_1;
+		var L_Yprimaangulo_1 = L_Y2GamaL2angulo_raiz1 + L_Y2tanhangulo_1;
+		var L_Yprimamodulo_2 = L_Y2GamaL2modulo_raiz2 * L_Y2tanhmodulo_2;
+		var L_Yprimaangulo_2 = L_Y2GamaL2angulo_raiz2 + L_Y2tanhangulo_2;
+
+		var L_Irmodulo = L_P * 1000 / (Math.pow(3, 1 / 2) * L_VR_LL * 1000 * L_FP);
+		if (L_FP_signo === "L_atraso") {
+			var L_Irangulo = (-1) * Math.acos(L_FP) * 180 / Math.PI;
+		}
+		else if (L_FP_signo === "L_adelanto") {
+			var L_Irangulo = Math.acos(L_FP) * 180 / Math.PI;
+		}
+		var L_Irreal = Math.cos((L_Irangulo * Math.PI) / 180) * L_Irmodulo;
+		var L_Irimaginario = Math.sin((L_Irangulo * Math.PI) / 180) * L_Irmodulo;
+
+		var L_ZprimaYprima2Vrmodulo_1 = ((L_Zprimamodulo_1 * L_Yprimamodulo_1) / (2)) * L_VR_LL * 1000;
+		var L_ZprimaYprima2Vrangulo_1 = (L_Zprimaangulo_1 + L_Yprimaangulo_1);
+		var L_ZprimaYprima2Vrmodulo_2 = ((L_Zprimamodulo_2 * L_Yprimamodulo_2) / (2)) * L_VR_LL * 1000;
+		var L_ZprimaYprima2Vrangulo_2 = (L_Zprimaangulo_2 + L_Yprimaangulo_2);
+		var L_ZprimaYprima2Vrreal_1 = Math.cos((L_ZprimaYprima2Vrangulo_1 * Math.PI) / 180) * L_ZprimaYprima2Vrmodulo_1;
+		var L_ZprimaYprima2Vrimaginario_1 =Math.sin((L_ZprimaYprima2Vrangulo_1 * Math.PI) / 180) * L_ZprimaYprima2Vrmodulo_1;
+		var L_ZprimaYprima2Vrreal_2 = Math.cos((L_ZprimaYprima2Vrangulo_2 * Math.PI) / 180) * L_ZprimaYprima2Vrmodulo_2;
+		var L_ZprimaYprima2Vrimaginario_2 =Math.sin((L_ZprimaYprima2Vrangulo_2 * Math.PI) / 180) * L_ZprimaYprima2Vrmodulo_2;
+
+		var L_ZprimaIrmodulo_1 = L_Zprimamodulo_1 * L_Irmodulo;
+		var L_ZprimaIrangulo_1 = L_Zprimaangulo_1 + L_Irangulo;
+		var L_ZprimaIrmodulo_2 = L_Zprimamodulo_2 * L_Irmodulo;
+		var L_ZprimaIrangulo_2 = L_Zprimaangulo_2 + L_Irangulo;
+		var L_ZprimaIrreal_1 = Math.cos((L_ZprimaIrangulo_1 * Math.PI) / 180) * L_ZprimaIrmodulo_1;
+		var L_ZprimaIrimaginario_1 =Math.sin((L_ZprimaIrangulo_1 * Math.PI) / 180) * L_ZprimaIrmodulo_1;
+		var L_ZprimaIrreal_2 = Math.cos((L_ZprimaIrangulo_2 * Math.PI) / 180) * L_ZprimaIrmodulo_2;
+		var L_ZprimaIrimaginario_2 =Math.sin((L_ZprimaIrangulo_2 * Math.PI) / 180) * L_ZprimaIrmodulo_2;
+
+		var L_Vsreal_1 = L_ZprimaYprima2Vrreal_1 + L_ZprimaIrreal_1; 
+		var L_Vsimaginario_1 = L_ZprimaYprima2Vrimaginario_1 + L_ZprimaIrimaginario_1; 
+		var L_Vsreal_2 = L_ZprimaYprima2Vrreal_2 + L_ZprimaIrreal_2; 
+		var L_Vsimaginario_2 = L_ZprimaYprima2Vrimaginario_2 + L_ZprimaIrimaginario_2; 
+		var L_Vsmodulo_1 = Math.pow(Math.pow(L_Vsreal_1, 2) + Math.pow(L_Vsimaginario_1, 2), 1 / 2);
+		var L_Vsangulo_1 = (Math.atan(L_Vsimaginario_1 / L_Vsreal_1)) * 180 / Math.PI;
+		var L_Vsmodulo_2 = Math.pow(Math.pow(L_Vsreal_2, 2) + Math.pow(L_Vsimaginario_2, 2), 1 / 2);
+		var L_Vsangulo_2 = (Math.atan(L_Vsimaginario_2 / L_Vsreal_2)) * 180 / Math.PI;
+		
+		//El resultado no es el correcto
+		document.getElementById('L_VSL_result').value = L_Vsmodulo_1;
+		document.getElementById('L_VSa_result').value = L_Vsangulo_1;
+		document.getElementById('L_IRL_result').value = L_Vsmodulo_2;
+		document.getElementById('L_IRa_result').value = L_Vsangulo_2;
+		
+	}
+</script>		
+		
+		
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+						<a class="logo" href="../index.html"><img src="images/back.png"  alt="">	</a>
+						
+							<!--<span class="icon fa-diamond"></span>                width="65" height="45"-->
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Relación voltaje corriente en líneas de transmisión</h1>
+								
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Línea Corta</a></li>
+								<li><a href="#work">Línea Média</a></li>
+								<li><a href="#about">Línea Larga</a></li>
+								<!--<li><a href="agrupados/index.html">Agrupados</a></li>-->
+								
+								<!--<li><a href="#contact">Doble Circuito</a></li>-->
+								<!--<li><a href="#contact">Contact</a></li>-->
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Monofásico -->
+							<article id="intro">
+								<h2 class="major">Monofásico</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>
+<center>
+<form>
+
+<input placeholder="Resistencia R en Ω/m" type = "text" id = "C_R"><br>
+<input placeholder="Inductancia XL en Ω/m" type = "text" id = "C_XL"><br>
+<input placeholder="Potencia Activa en KW" type = "text" id = "C_P"><br>
+<input placeholder="Longitud de la linea en Km" type = "text" id = "C_L"><br>
+<input placeholder="Tensión Linea-Linea Vr en KV" type = "text" id = "C_VR_LL"><br>
+<input placeholder="Factor de Potencia" type = "text" id = "C_FP"><br>
+<select id = "C_FP_signo">
+<option value = "">En atraso o en adelanto</option>
+	<option value = "C_atraso">Atraso</option>
+	<option value = "C_adelanto">Adelanto</option>	
+</select><br><br>
+
+<input type = "Button" value = "Calcular" onclick="C_calc();"><br><br>
+RESULTADOS<br><br>
+<input type = "text" readonly id = "C_VSm_result"> V linea-neutro (módulo de Vs)<br><br>
+<input type = "text" readonly id = "C_VSa_result"> V linea-neutro (ángulo de Vs)<br><br>
+<input type = "text" readonly id = "C_IRm_result"> A (módulo de Is) <br><br>
+<input type = "text" readonly id = "C_IRa_result"> A (ángulo de Is) <br><br>
+<input type = "reset" value = "Limpiar">
+
+</form>
+</center>									
+								</p>
+								</article>
+						<!-- Trifásico -->
+							<article id="work">
+								<h2 class="major">Trifásico Simétrico</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>
+<center>
+<form>
+
+<input placeholder="Resistencia R en Ω/m" type = "text" id = "M_R"><br>
+<input placeholder="Inductancia XL en Ω/m" type = "text" id = "M_XL"><br>
+<input placeholder="Inductancia XC en MΩ/m" type = "text" id = "M_XC"><br>
+<input placeholder="Potencia Activa en KW" type = "text" id = "M_P"><br>
+<input placeholder="Longitud de la linea en Km" type = "text" id = "M_L"><br>
+<input placeholder="Tensión Linea-Linea Vr en KV" type = "text" id = "M_VR_LL"><br>
+<input placeholder="Factor de Potencia" type = "text" id = "M_FP"><br>
+<select id = "M_FP_signo">
+<option value = "">En atraso o en adelanto</option>
+	<option value = "M_atraso">Atraso</option>
+	<option value = "M_adelanto">Adelanto</option>	
+</select><br><br>
+
+<input type = "Button" value = "Calcular" onclick="M_calc();"><br><br>
+RESULTADOS<br><br>
+<input type = "text" readonly id = "M_VSm_result"> V linea-neutro (módulo de Vs)<br><br>
+<input type = "text" readonly id = "M_VSa_result"> V linea-neutro (ángulo de Vs)<br><br>
+<input type = "text" readonly id = "M_IRm_result"> A (módulo de Is) <br><br>
+<input type = "text" readonly id = "M_IRa_result"> A (ángulode Is) <br><br>
+<input type = "reset" value = "Limpiar">
+
+</form>
+</center>
+
+								</p>
+							</article>
+
+						<!-- Agripado -->
+							<article id="about">
+								<h2 class="major">Doble Circuito</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>
+								
+<center>
+	<form>
+
+		<input placeholder="Resistencia R en Ω/m" type="text" id="L_R"><br>
+		<input placeholder="Inductancia XL en Ω/m" type="text" id="L_XL"><br>
+		<input placeholder="Inductancia XC en MΩ/m" type="text" id="L_XC"><br>
+		<input placeholder="Potencia Activa en KW" type="text" id="L_P"><br>
+		<input placeholder="Longitud de la linea en Km" type="text" id="L_L"><br>
+		<input placeholder="Tensión Linea-Linea Vr en KV" type="text" id="L_VR_LL"><br>
+		<input placeholder="Factor de Potencia" type="text" id="L_FP"><br>
+		<select id="L_FP_signo">
+			<option value="">En atraso o en adelanto</option>
+			<option value="L_atraso">Atraso</option>
+			<option value="L_adelanto">Adelanto</option>
+		</select><br><br>
+
+		<input type="Button" value="Calcular" onclick="L_calc();"><br><br>
+		RESULTADOS<br><br>
+		<input type="text" readonly id="L_VSL_result"> V linea-neutro (módulo de Vs)<br><br>
+		<input type="text" readonly id="L_VSa_result"> V linea-neutro (ángulo de Vs)<br><br>
+		<input type="text" readonly id="L_IRL_result"> A (módulo de Is) <br><br>
+		<input type="text" readonly id="L_IRa_result"> A (ángulode Is) <br><br>
+		<input type="reset" value="Limpiar">
+
+	</form>
+</center>									
+									
+								</p>
+							</article>
+
+						<!-- Doble Circuito -->
+							<article id="contact">
+								<h2 class="major">Agrupados</h2>
+								<span class="image main"><img src="images/pic06.jpg" alt="" /></span>
+								<p>
+									
+								</p>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button special">Special</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button special icon fa-download">Icon</a></li>
+										<li><a href="#" class="button icon fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button special disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="field half first">
+											<label for="demo-name">Name</label>
+											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+										</div>
+										<div class="field half">
+											<label for="demo-email">Email</label>
+											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+										</div>
+										<div class="field">
+											<label for="demo-category">Category</label>
+											<div class="select-wrapper">
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Aind_mono_Dministration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+										</div>
+										<div class="field half first">
+											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+											<label for="demo-priority-low">Low</label>
+										</div>
+										<div class="field half">
+											<input type="radio" id="demo-priority-high" name="demo-priority">
+											<label for="demo-priority-high">High</label>
+										</div>
+										<div class="field half first">
+											<input type="checkbox" id="demo-copy" name="demo-copy">
+											<label for="demo-copy">Email me a copy</label>
+										</div>
+										<div class="field half">
+											<input type="checkbox" id="demo-human" name="demo-human" checked>
+											<label for="demo-human">Not a robot</label>
+										</div>
+										<div class="field">
+											<label for="demo-message">Message</label>
+											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Creado por Andrés Castillo <br> Diseño original tomado de <a href="https://html5up.net">HTML5 UP</a></p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
