@@ -1616,3 +1616,6 @@
 		body.is-loading #footer {
 			opacity: 0;
 		}
+		.portada {
+			display: none;
+		}
