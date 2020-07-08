@@ -1620,3 +1620,12 @@
 		.portada {
 			display: none;
 		}
+
+		@media screen and (max-width: 736px) {
+
+			#header .logo #logo1 {
+				width: 4.35rem;
+				height: 3.375rem;
+				margin: auto;
+		}
+	}

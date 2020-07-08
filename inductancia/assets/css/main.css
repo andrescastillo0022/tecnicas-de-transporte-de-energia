@@ -1244,7 +1244,7 @@
 			
 			#header .logo #logo1 {
 			width: 5.8rem;
-			height: 4.5rem;
+			height: 5.8rem;
 			margin: auto;
 			
 }
@@ -1614,3 +1614,12 @@
 		body.is-loading #footer {
 			opacity: 0;
 		}
+
+		@media screen and (max-width: 736px) {
+
+			#header .logo #logo1 {
+				width: 4.35rem;
+				height: 4.35rem;
+				margin: auto;
+		}
+	}
